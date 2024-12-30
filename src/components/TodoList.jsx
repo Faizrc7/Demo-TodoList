@@ -13,13 +13,11 @@ const TodoList = () => {
         if(input.length != 0){
             setTodos([...todos, input]);
             setInput("");
-            // console.log(todos);
         } else {
             console.log("byee")
         }
     }
     const handleDel = (index) => {
-        // console.log(`Deleting item at index ${index}: ${todos[index]}`);
         let newTodos = todos.filter((todo, i) => i !== index);
         setTodos(newTodos);
     };
@@ -35,7 +33,6 @@ const TodoList = () => {
         <button onClick={handleClick}>Submit</button>
         {
             todos.map((todo, index)=>{
-                // console.log(`Index: ${index}, Todo: ${todo}`);
                 return <li key={index}>
                             <span>{todo}</span>
                             <button onClick={()=>{handleDel(index)}}>-</button>
