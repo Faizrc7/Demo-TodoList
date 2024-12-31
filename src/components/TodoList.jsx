@@ -24,6 +24,7 @@ const TodoList = () => {
 
     useEffect(() => {
         console.log("Updated Todos:", todos);
+        console.log("first")
     }, [todos]);
 
 
